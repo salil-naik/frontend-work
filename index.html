@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TenTwenty Front End Test</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4b709c7fc0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="video__wrapper">
+        <video class="video">
+            <source src="/assets/videos/down.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <section class="intro">
+        <div class="intro__right">
+            <div class="intro__right__layer first-layer">
+                <div class="first-layer__image"></div>
+            </div>
+            <div class="intro__right__content-wrapper">
+                <h1 class="intro__right__title">
+                    <span>
+                        <span class="words">The&nbsp;</span>
+                    </span>
+                    <span>
+                        <span class="words">future&nbsp;</span>
+                    </span>
+                    <span>
+                        <span class="words">starts&nbsp;</span>
+                    </span>
+                    <span>
+                        <span class="words">here</span>
+                    </span>
+                </h1>
+                <p class="intro__right__para">
+                    <span class="intro__right__text">
+                        Beyond the work of starting and growing business, DFD also offers an
+                        attractive haven for venture capitalists and investors to tap into a pool of budding
+                        entrepreneurial talent and opporrunities.
+                    </span>
+                </p>
+                <div>
+                    <a href="placeholder" class="btn btn--round intro__button">learn more</a>
+                </div>
+            </div>
+
+            <div class="nav-btn__container">
+                <button class="nav-btn" onclick="goToOfferings()">
+                    <span class="nav-btn__c1">
+                        <span></span>
+                    </span>
+                    <span class="nav-btn__c2">
+                        <span></span>
+                    </span>
+                    <i class="fas fa-arrow-down"></i>
+                </button>
+            </div>
+            <div class="intro__right__layer second-layer"></div>
+        </div>
+
+        <div class="intro__left">
+            <form action="placeholder" class="search-bar__form">
+                <label for="search-bar" class="search-bar__label">Search our offerings</label>
+                <div class="search-input-container">
+                    <input type="text" class="search-bar__input" placeholder="Trade Lic..">
+                    <button type="submit" class="search-bar__button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="offerings">
+        <div class="offerings__left">
+            <div class="offerings__left__main-wrapper">
+                <div class="offerings__layer"></div>
+                <div class="offerings__left__content-wrapper">
+                    <h2 class="offerings__left__title">
+                        <span>Our Offerings</span>
+                    </h2>
+
+                    <div class="offerings__left__grid">
+                        <div class="offerings__card">
+                            <div>
+                                <div class="offerings__card__icon-container">
+                                    <i class="fas fa-bookmark"></i>
+                                </div>
+                            </div>
+
+                            <p class="offerings__card__text-container">
+                                <span>Business Visas</span>
+                            </p>
+                        </div>
+                        <div class="offerings__card">
+                            <div>
+                                <div class="offerings__card__icon-container">
+                                    <i class="fas fa-bookmark"></i>
+                                </div>
+                            </div>
+
+                            <p class="offerings__card__text-container">
+                                <span>Experiment Pilot Products</span>
+                            </p>
+                        </div>
+                        <div class="offerings__card">
+                            <div>
+                                <div class="offerings__card__icon-container">
+                                    <i class="fas fa-bookmark"></i>
+                                </div>
+                            </div>
+
+                            <p class="offerings__card__text-container">
+                                <span>Access to share of ADE1 billion of funding for entrepreneurs in Dubai</span>
+                            </p>
+                        </div>
+                        <div class="offerings__card">
+                            <div>
+                                <div class="offerings__card__icon-container">
+                                    <i class="fas fa-bookmark"></i>
+                                </div>
+                            </div>
+
+                            <p class="offerings__card__text-container">
+                                <span>Subsidised accommodation</span>
+                            </p>
+                        </div>
+                        <div class="offerings__card">
+                            <div>
+                                <div class="offerings__card__icon-container">
+                                    <i class="fas fa-bookmark"></i>
+                                </div>
+                            </div>
+
+                            <p class="offerings__card__text-container">
+                                <span>Legal Advise & Counsel</span>
+                            </p>
+                        </div>
+                        <div class="offerings__card">
+                            <div>
+                                <div class="offerings__card__icon-container">
+                                    <i class="fas fa-bookmark"></i>
+                                </div>
+                            </div>
+
+                            <p class="offerings__card__text-container">
+                                <span>The Middle East's Largest Incubator</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="offerings__right">
+            <h3 class="offerings__right__title">
+                <span>Our Offerings</span>
+            </h3>
+            <div class="offerings__right__link">
+                <a href="placeholder">Learn more <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="nav-btn__container">
+                <button class="nav-btn" onclick="goBackToIntro()">
+                    <span class="nav-btn__c1">
+                        <span></span>
+                    </span>
+                    <span class="nav-btn__c2">
+                        <span></span>
+                    </span>
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+
+                <button class="nav-btn" onclick="goToHubs()">
+                    <span class="nav-btn__c1">
+                        <span></span>
+                    </span>
+                    <span class="nav-btn__c2">
+                        <span></span>
+                    </span>
+                    <i class="fas fa-arrow-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="hubs">
+        
+    </section>
+
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <!-- Scroll Magic -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> -->
+    <!-- custom JavaScript -->
+    <script src="/app.js"></script>
+</body>
+
+</html>

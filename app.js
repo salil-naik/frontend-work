@@ -5,6 +5,7 @@ const preLoaderImgContainer = document.querySelector(".pre-loader__image-contain
 const preLoaderImgOne = document.querySelector(".pre-loader__image-one");
 const preLoaderImgTwo = document.querySelector(".pre-loader__image-two");
 const preLoaderTitle = preLoader.querySelectorAll(".word");
+const nav = document.querySelector("nav");
 
 // intro 
 const videoUpWrapper = document.querySelector(".videoUp__wrapper");
@@ -79,6 +80,8 @@ let playUpVid = () => {
 
 let tl = gsap.timeline();
 
+let preLoaderImgWidth = window.innerWidth < 640? "100vw": "60vw"
+
 tl.to(preLoaderLogo, 1, {opacity: 1})
   .to(preLoaderLogo, 0.5, {opacity: 0})
   .to(preLoaderImgOne, 0.3, {y: "0"})
@@ -87,13 +90,15 @@ tl.to(preLoaderLogo, 1, {opacity: 1})
   .to(preLoaderImgTwo, 0.3, {y: "0"}, "-=0.1")
   .to(preLoaderTitle[1], 0.3, {y: "0"}, "-=0.2")
   .to(preLoaderTitle[1], 0.3, {y: "100%"}, "+=1")
-  .to(preLoaderImgContainer, 0.5, {height:"100vh", width:"60vw", marginRight: "0"})
+  .to(preLoaderImgContainer, 0.5, {height:"100vh", width:preLoaderImgWidth, marginRight: "0"})
   // .to(preLoaderImgContainer, 0.2, {opacity:0})
   .to(preLoader, 0.5, {opacity:0})
   .to(preLoader, 0, {display:"none"})
 
 let goToOfferings = () => {
-  tl.to(titleWords[0], 0.3, { y: "-100%", opacity: 0 })
+  tl.to(nav, 0.1, {opacity: 0})
+    .to(nav, 0.1, {display: "none"})
+    .to(titleWords[0], 0.3, { y: "-100%", opacity: 0 })
     .to(titleWords[1], 0.3, { y: "-100%", opacity: 0 }, "-=0.28")
     .to(titleWords[2], 0.3, { y: "-100%", opacity: 0 }, "-=0.26")
     .to(titleWords[3], 0.3, { y: "-100%", opacity: 0 }, "-=0.24")
@@ -123,7 +128,9 @@ let goToOfferings = () => {
     .to(cards[2], 0.4, { y: 0, opacity: 1 }, "-=0.3")
     .to(cards[3], 0.4, { y: 0, opacity: 1 }, "-=0.3")
     .to(cards[4], 0.4, { y: 0, opacity: 1 }, "-=0.3")
-    .to(cards[5], 0.4, { y: 0, opacity: 1 }, "-=0.3");
+    .to(cards[5], 0.4, { y: 0, opacity: 1 }, "-=0.3")
+    .to(cards[6], 0.4, { y: 0, opacity: 1 }, "-=0.3")
+    .to(cards[7], 0.4, { y: 0, opacity: 1 }, "-=0.3");
 
   setTimeout(() => {
     playUpVid();
@@ -143,6 +150,8 @@ let goToHubs = () => {
     .to(cards[3], 0.4, { y: "-10px", opacity: 0 }, "-=0.3")
     .to(cards[4], 0.4, { y: "-10px", opacity: 0 }, "-=0.3")
     .to(cards[5], 0.4, { y: "-10px", opacity: 0 }, "-=0.3")
+    .to(cards[6], 0.4, { y: "-10px", opacity: 0 }, "-=0.3")
+    .to(cards[7], 0.4, { y: "-10px", opacity: 0 }, "-=0.3")
     .to(offeringsRightTitle, 0.4, { y: "-100%" }, "-=0.3")
     .to(offeringsRightLink, 0.4, { y: "-100%" }, "-=0.3")
     .to(offeringsLayer, 0.3, { backgroundColor: "rgba(48, 82, 122, 1)"}, "-=0.4")

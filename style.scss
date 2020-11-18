@@ -67,6 +67,94 @@ a {
   }
 }
 
+.pre-loader{
+  height:100vh; 
+  width:100vw;
+  background-color:#2AB4B9;
+  position:fixed; 
+  top:0;
+  left:0;
+  z-index:22;
+  display:flex; 
+  flex-direction:column;
+  justify-content: center;
+
+  &__logo{
+    text-align: center;
+    display:flex; 
+    flex-direction:column; 
+    justify-content: center;
+    height:100vh;
+    width:100vw;
+    position:absolute; 
+    top: 0; left:0;
+    opacity:0;
+  }
+
+  &__image-container{
+    width:40vw;
+    height:40vw;
+    position: relative;
+    overflow:hidden;
+    margin:auto;
+
+    .pre-loader__image-one,.pre-loader__image-two{
+      position:absolute;
+      width:100%; 
+      height:100%; 
+      object-fit: cover;
+      top:0; 
+      left:0;
+      transform: translateY(-100%);
+      transition:transform 0.5s $transition-style-one;
+    }
+    .pre-loader__image-one{
+      z-index: 1;
+      background-image:url("./assets/images/pattern.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+    .pre-loader__image-two{
+      z-index: 2;
+      background-image:url("./assets/images/pic2.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  &__text-container{
+    position:absolute; 
+    width:100%;
+    z-index: 4;
+    h2{
+      font-size:140px;
+      text-align:center;
+      color:white;
+      overflow:hidden;
+
+      span{
+        display:block;
+        transform:translateY(-100%);
+        transition:transform 0.2s $transition-style-one;
+      }
+    }
+  }
+}
+
+.header{
+  position:fixed; 
+  z-index:20;
+  top:0; left:0; 
+  width:100%; 
+  padding:40px;
+
+  ul li{
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+  }
+}
+
 .nav-btn {
   height: 3.8vw;
   width: 3.8vw;
@@ -340,6 +428,7 @@ video {
 // offerings section
 
 .offerings {
+  display:none;
   &__left {
     height: 100vh;
     width: 60vw;
@@ -512,7 +601,7 @@ video {
   left: 0;
   width: 100vw;
   height: 100vh;
-  // display: none;
+  display: none;
 
   &__left-top {
     height: 70vh;

@@ -1,3 +1,12 @@
+// pre-loader
+const preLoader = document.querySelector(".pre-loader");
+const preLoaderLogo = document.querySelector(".pre-loader__logo");
+const preLoaderImgContainer = document.querySelector(".pre-loader__image-container");
+const preLoaderImgOne = document.querySelector(".pre-loader__image-one");
+const preLoaderImgTwo = document.querySelector(".pre-loader__image-two");
+const preLoaderTitle = preLoader.querySelectorAll(".word");
+
+// intro 
 const videoUpWrapper = document.querySelector(".videoUp__wrapper");
 const videoUp = document.querySelector(".videoUp");
 const introRight = document.querySelector(".intro__right");
@@ -11,6 +20,7 @@ const titleWords = document.querySelectorAll(".words");
 const introLeft = document.querySelector(".intro__left");
 
 // offerings
+const offerings = document.querySelector(".offerings");
 const offeringsLayer = document.querySelector(".offerings__layer");
 const offeringsRight = document.querySelector(".offerings__right");
 const offeringsLeft = document.querySelector(".offerings__left");
@@ -69,6 +79,19 @@ let playUpVid = () => {
 
 let tl = gsap.timeline();
 
+tl.to(preLoaderLogo, 1, {opacity: 1})
+  .to(preLoaderLogo, 0.5, {opacity: 0})
+  .to(preLoaderImgOne, 0.3, {y: "0"})
+  .to(preLoaderTitle[0], 0.3, {y: "0"}, "-=0.2")
+  .to(preLoaderTitle[0], 0.3, {y: "100%"}, "+=1")
+  .to(preLoaderImgTwo, 0.3, {y: "0"}, "-=0.1")
+  .to(preLoaderTitle[1], 0.3, {y: "0"}, "-=0.2")
+  .to(preLoaderTitle[1], 0.3, {y: "100%"}, "+=1")
+  .to(preLoaderImgContainer, 0.5, {height:"100vh", width:"60vw", marginRight: "0"})
+  // .to(preLoaderImgContainer, 0.2, {opacity:0})
+  .to(preLoader, 0.5, {opacity:0})
+  .to(preLoader, 0, {display:"none"})
+
 let goToOfferings = () => {
   tl.to(titleWords[0], 0.3, { y: "-100%", opacity: 0 })
     .to(titleWords[1], 0.3, { y: "-100%", opacity: 0 }, "-=0.28")
@@ -88,6 +111,7 @@ let goToOfferings = () => {
       { height: "60vh", width: "40%" },
       "-=1.4"
     )
+    .to(offerings, 0.1, {display:'block'})
     .to(offeringsLayer, 0.3, { height: "100vh" })
     .to(offeringsRight, 0, { display: "flex" })
     .fromTo(offeringsRight, 0.3, { opacity: 0 }, { opacity: 1 })
@@ -126,6 +150,7 @@ let goToHubs = () => {
     .to(introRight, 0, { display:"none"})
     .to(videoDownWrapper, 0, {zIndex:6})
     .to(offeringsRight, 0, { display: "none" })
+    .to(hubs, 0, {display:"block"})
     .to(offeringsLayer, 1.4, { height: "70vh", width: "40vw" })
     .to(
       videoUpWrapper,

@@ -150,6 +150,9 @@ a {
 
   ul{
     margin-top:20px;
+    display:flex; 
+    flex-direction: column;
+    max-width: 200px;
     li{
       font-size: 14px;
       font-weight: 600;
@@ -159,11 +162,22 @@ a {
       margin-bottom:10px;
       text-transform: uppercase;
 
-      &:hover{
-        list-style-type: disc;
-      }
+      .nav-link{
+        color:inherit;
+        position: relative;
 
-      a{color:inherit}
+        &:hover {
+          &::after{
+            content:"";
+            position:absolute; 
+            height:7px; width:7px; 
+            background-color: white;
+            border-radius:4px;
+            left:-12px;
+            top:5px;
+          }
+        }
+      }
     }
   }
 

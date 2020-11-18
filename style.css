@@ -171,6 +171,14 @@ a {
 
 .header ul {
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 200px;
 }
 
 .header ul li {
@@ -183,12 +191,20 @@ a {
   text-transform: uppercase;
 }
 
-.header ul li:hover {
-  list-style-type: disc;
+.header ul li .nav-link {
+  color: inherit;
+  position: relative;
 }
 
-.header ul li a {
-  color: inherit;
+.header ul li .nav-link:hover::after {
+  content: "";
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  background-color: white;
+  border-radius: 4px;
+  left: -12px;
+  top: 5px;
 }
 
 .header nav .desktop-logo {

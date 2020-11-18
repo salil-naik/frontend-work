@@ -1244,6 +1244,8 @@ video {
     position: static;
     padding: 40px 30px;
     width: 100%;
+    border-top: 2px solid #30527a;
+    height: 160px;
   }
   .hubs__left-bottom__title span {
     -webkit-transform: translateY(0);

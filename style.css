@@ -201,8 +201,8 @@ video {
           transform: translateY(0);
   -webkit-transform-origin: top;
           transform-origin: top;
-  background-image: url("./assets/images/dubai_city_2.jpg");
-  background-position: top;
+  background-image: url("./assets/images/pic2.jpg");
+  background-position: center;
 }
 
 .intro__right__layer.first-layer::after {
@@ -219,7 +219,8 @@ video {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("./assets/images/dubai_person_2.jpg");
+  background-image: url("./assets/images/pic4.jpg");
+  background-position: top;
 }
 
 .intro__right__content-wrapper {

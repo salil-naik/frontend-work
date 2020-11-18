@@ -199,8 +199,9 @@ video {
       z-index: 10;
       transform: translateY(0);
       transform-origin: top;
-      background-image: url("./assets/images/dubai_city_2.jpg");
-      background-position: top;
+      // background-image: url("./assets/images/dubai_city_2.jpg");
+      background-image: url("./assets/images/pic2.jpg");
+      background-position: center;
 
       //   dark layer
       &::after {
@@ -217,7 +218,8 @@ video {
       position: absolute;
       top: 0;
       left: 0;
-      background-image: url("./assets/images/dubai_person_2.jpg");
+      background-image: url("./assets/images/pic4.jpg");
+      background-position: top;
     }
   }
 

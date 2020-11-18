@@ -43,6 +43,12 @@ const newsCopyLayer = newsCopy.querySelector(".news-copy__layer");
 const newsCopyTitle = newsCopy.querySelectorAll(".word");
 const newsCopyBtn = newsCopy.querySelector(".btn");
 
+// events
+const events = document.querySelector(".events");
+const eventsTitle = events.querySelectorAll(".word");
+const eventsBtn = events.querySelector(".events__btn-container");
+const eventsCard = events.querySelectorAll(".events__card");
+
 // setting the current time for video
 videoUp.addEventListener(
   "loadedmetadata",
@@ -152,6 +158,26 @@ let goToNewsCopy = () => {
     .to(newsCopyTitle[4], 0.35, { y: "0%"}, "-=0.27")
     .to(newsCopyTitle[5], 0.35, { y: "0%"}, "-=0.25")
     .to(newsCopyBtn, 0.35, {opacity: 1})
+    .to(events, 0.1, {display: "flex"})
+}
+
+let goToEvents = () => {
+  tl.to(newsCopyBtn, 0.35, {opacity: 0})
+    .to(newsCopyTitle[0], 0.35, { y: "-100%"})
+    .to(newsCopyTitle[1], 0.35, { y: "-100%"}, "-=0.33")
+    .to(newsCopyTitle[2], 0.35, { y: "-100%"}, "-=0.31")
+    .to(newsCopyTitle[3], 0.35, { y: "-100%"}, "-=0.29")
+    .to(newsCopyTitle[4], 0.35, { y: "-100%"}, "-=0.27")
+    .to(newsCopyTitle[5], 0.35, { y: "-100%"}, "-=0.25")
+    .to(newsCopyLayer, 1, {top:"-100%"})
+    .to(newsCopy, 0.1, {opacity: "0"})
+    .to(newsCopy, 0.1, {display: "none"})
+    .to(eventsTitle[0], 0.3, {y:"0", opacity: 1})
+    .to(eventsTitle[1], 0.3, {y:"0", opacity: 1}, "-=0.2")
+    .to(eventsBtn, 0.3, {opacity:1})
+    .to(eventsCard[0], 0.3, {y: "0", opacity: 1}, "-=0.2")
+    .to(eventsCard[1], 0.3, {y: "0", opacity: 1}, "-=0.2")
+    .to(eventsCard[2], 0.3, {y: "0", opacity: 1}, "-=0.2")
 }
 
 // const video_section = document.querySelector(".video__wrapper");
